@@ -12,6 +12,8 @@ module RocketJobMissionControl
     rescue LoadError
     end
 
+    config.rocket_job_mission_control = RocketJobMissionControl::Config
+
     config.to_prepare do
       Rails.application.config.assets.precompile += %w(
         rocket_job_mission_control/rocket-icon-64x64.png
